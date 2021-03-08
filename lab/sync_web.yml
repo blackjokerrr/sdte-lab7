@@ -1,0 +1,7 @@
+- hosts: web
+  tasks:
+    - name: "Test Web"
+      replace:
+        path: /var/www/default/index.html
+        regexp: "Coffee"
+        replace: "I want to eat Coffee at Shop name: {{ inventory_hostname }}"
